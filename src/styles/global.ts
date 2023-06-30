@@ -18,4 +18,12 @@ export const globalStyles = globalCss({
         fontFamily: '$default',
         fontWeight: 400,
     },
+    'li, a': {
+        listStyle: 'none',
+        textDecoration: 'none'
+    }
 });
+
+export const GlobalContainer = styled('section', {
+    display: 'flex'
+}) 

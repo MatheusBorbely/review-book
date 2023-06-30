@@ -1,14 +1,15 @@
 import Image from "next/image";
-
+import Head from "next/head";
 import { BannerHero, LoginOptions, MainContainer } from "./styles";
 import SocialButton from "../components/SocialButton";
-import Logo from '../../../public/Logo.svg';
-import BannerLogin from '../../../public/banner-login.png';
-import Google from '../../../public/google.svg';
-import GitHub from '../../../public/github.svg';
-import Guest from '../../../public/guest.svg';
+import Logo from '../../assets/Logo.svg';
+import BannerLogin from '../../assets/banner-login.png';
+import Google from '../../assets/google.svg';
+import GitHub from '../../assets/github.svg';
+import Guest from '../../assets/guest.svg';
+import { ReactElement } from "react";
 
-const socialOptions = [
+const social = [
     {
         name: 'Google',
         src:  Google
@@ -22,9 +23,17 @@ const socialOptions = [
         src:  Guest
     }
 ];
-export default function Home() {  
+export default function Login() {  
+    const socialOptions = social.map(({ name, src }) => (
+        <SocialButton src={src} alt={name}>
+            Entrar como {name}
+        </SocialButton>
+    ))
     return (
       <>
+        <Head>
+            <title>Login</title>
+        </Head>
         <MainContainer>
             <BannerHero>
                 <Image src={Logo} alt="logo livro" quality={100}/>
@@ -41,15 +50,19 @@ export default function Home() {
                         </span>
                     </header>
                     <section>
-                        {socialOptions.map(({ name, src }) => (
-                            <SocialButton src={src} alt={name}>
-                                Entrar como {name}
-                            </SocialButton>
-                        ))} 
+                        {socialOptions}
                     </section>
                 </article>
             </LoginOptions>
         </MainContainer>
+      </>
+    )
+  }
+
+  Login.getLayout = function getLayout(page: ReactElement) {
+    return (
+      <>
+        {page}
       </>
     )
   }

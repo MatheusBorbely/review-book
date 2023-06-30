@@ -9,8 +9,8 @@ export const ButtonContainer = styled('button', {
     alignItems: 'center',
     justifyContent: 'flex-start',
     gap: '$5',
-    maxWidth: '23rem',
-    width: '100%',
+    width: '23rem',
+    maxWidth: '100%',
     borderRadius: 8,
     cursor: 'pointer'
 })

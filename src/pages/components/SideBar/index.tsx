@@ -1,5 +1,5 @@
 import React from 'react'
-import { SideBarContainer, MenuContainer, MenuItem, SideBarHeader } from './styles'
+import { SideBarContainer, SideBarMenu, MenuItem, SideBarHeader } from './styles'
 import Image from 'next/image'
 import Logo from '../../../assets/Logo.svg'
 import { ChartLineUp, Binoculars, User, SignIn } from 'phosphor-react'
@@ -41,9 +41,9 @@ export function SideBar() {
       <SideBarHeader>
         <Image src={Logo} alt="logo" quality={100} width={128}/>
         <nav>
-          <MenuContainer>
+          <SideBarMenu>
             {menuItems}
-          </MenuContainer>
+          </SideBarMenu>
         </nav>
       </SideBarHeader>
       <footer>

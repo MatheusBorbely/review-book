@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Head from "next/head";
-import { BannerHero, LoginOptions, MainContainer } from "./styles";
+import { BannerHero, LoginOptions, LoginContainer } from "./styles";
 import SocialButton from "../components/SocialButton";
 import Logo from '../../assets/Logo.svg';
 import BannerLogin from '../../assets/banner-login.png';
@@ -34,7 +34,7 @@ export default function Login() {
         <Head>
             <title>Login</title>
         </Head>
-        <MainContainer>
+        <LoginContainer>
             <BannerHero>
                 <Image src={Logo} alt="logo livro" quality={100}/>
                 <Image src={BannerLogin} alt="Mulher lendo livro" quality={100}/>
@@ -54,7 +54,7 @@ export default function Login() {
                     </section>
                 </article>
             </LoginOptions>
-        </MainContainer>
+        </LoginContainer>
       </>
     )
   }

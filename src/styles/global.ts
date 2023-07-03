@@ -32,7 +32,7 @@ export const GlobalContainer = styled('section', {
 // All pages styles
 export const PageContainer = styled('main', {
     display: 'flex',
-    width: '38rem',
+    width: '62.25rem',
     flexDirection: 'column',
     gap: '$10',
     paddingTop: '4.5rem',

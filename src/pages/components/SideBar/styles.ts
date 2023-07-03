@@ -16,6 +16,7 @@ export const SideBarContainer = styled('aside', {
     gap: '4.5rem',
     maxWidth: '14.5rem',
     justifyContent: 'space-between',
+    marginRight: 0,
 
     footer:{
         span:{
@@ -44,7 +45,7 @@ export const SideBarHeader = styled('aside', {
 })
 
 
-export const MenuContainer = styled('ul', {
+export const SideBarMenu = styled('ul', {
     display: 'flex',
     alignItems: 'flex-start',
     justifyContent: 'center',

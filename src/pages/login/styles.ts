@@ -1,6 +1,6 @@
 import { styled } from "../../../stitches.config";
 
-export const MainContainer = styled('main', {
+export const LoginContainer = styled('main', {
     display: 'flex',
     padding: '$5',
     maxHeight: '100vh',

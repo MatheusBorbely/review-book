@@ -12,6 +12,7 @@ export const globalStyles = globalCss({
         backgroundColor: '$gray800',
         color: '$gray100',
         '-webkit-font-smoothing': 'antialiased',
+        lineHeight: '$base'
     },
 
     'body, input, textarea, button': {
@@ -25,5 +26,28 @@ export const globalStyles = globalCss({
 });
 
 export const GlobalContainer = styled('section', {
-    display: 'flex'
-}) 
+    display: 'flex',
+})
+
+// All pages styles
+export const PageContainer = styled('main', {
+    display: 'flex',
+    width: '38rem',
+    flexDirection: 'column',
+    gap: '$10',
+    paddingTop: '4.5rem',
+    margin: '0 auto'
+})
+export const PageTitle = styled('section', {
+    display:'flex',
+    gap: '$3',
+
+    svg:{
+        color: '$green100'
+    },
+    'h1': {
+        fontSize: '$2xl',
+        fontWeight: '$bold',
+        lineHeight: '$short',
+    }
+})

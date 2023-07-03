@@ -29,7 +29,7 @@ export function SideBar() {
   const router = useRouter();
   const currentRoute = router.pathname;
   const menuItems = menu.map(({name, icon, path}) => (
-    <MenuItem>
+    <MenuItem key={path}>
       <Link href={path} className={`${currentRoute === path && 'active'}`}>
         {icon} {name} 
       </Link>        

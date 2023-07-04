@@ -6,18 +6,32 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ts-node": "ts-node --compiler-options '{\"module\":\"CommonJS\"}'"
   },
   "dependencies": {
+    "@prisma/client": "^4.16.2",
     "@stitches/react": "^1.2.8",
-    "@types/node": "20.3.2",
+    "@tanstack/react-query": "^4.29.19",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
+    "@types/uuid": "^9.0.2",
+    "axios": "^1.4.0",
     "next": "13.4.7",
+    "next-auth": "^4.22.1",
     "phosphor-react": "^1.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "stitches": "^1.2.11",
-    "typescript": "5.1.5"
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.3",
+    "prisma": "^4.16.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   }
 }

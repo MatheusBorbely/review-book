@@ -32,11 +32,13 @@ export const GlobalContainer = styled('section', {
 // All pages styles
 export const PageContainer = styled('main', {
     display: 'flex',
-    width: '62.25rem',
+    width: '90rem',
     flexDirection: 'column',
     gap: '$10',
+    padding: '0 6rem',
     paddingTop: '4.5rem',
     margin: '0 auto'
+
 })
 export const PageTitle = styled('section', {
     display:'flex',

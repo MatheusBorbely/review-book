@@ -4,9 +4,10 @@ import  MagnifyingGlass  from '../../assets/MagnifyingGlass.svg'
 
 export const ExplorerContainer = styled('article', {
     display: 'flex',
-    width: '62.25rem',
+    width: '90rem',
     flexDirection: 'column',
     gap: '$10',
+    padding: '0 6rem',
     paddingTop: '4.5rem',
     margin: '0 auto'
 })

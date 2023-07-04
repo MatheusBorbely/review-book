@@ -14,7 +14,7 @@ export const SideBarContainer = styled('aside', {
     maxHeight: 'calc(100vh - 2.5rem)',
     width: 'fit-content',
     gap: '4.5rem',
-    maxWidth: '14.5rem',
+    minWidth: '14.5rem',
     justifyContent: 'space-between',
     marginRight: 0,
 

@@ -5,19 +5,23 @@ import { HomeFeed } from './styles'
 import { PageContainer, PageTitle } from '@/styles/global'
 import { useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/axios'
+import { Card } from './components/Card/Card'
+import { Rating } from '@/interfaces/Rating'
+import { LoadingCard } from './components/LoadingCard/LoadingCard'
 
 
 export default function Home() {
-  const {data: books, isLoading} = useQuery([],async () => {
-    const response = await api.get('/books');
-    console.log(response.data)
+  const {data: ratings, isLoading} = useQuery([],async () => {
+    const response = await api.get('/rating');
+    console.log(response.data[0])
     return response.data;
   })
 
-  const CardsBooks = isLoading ? (
-    <span>Carregando...</span>
+  const CardsRatings = isLoading ? (
+    <LoadingCard />
   ) : (
-    books.map(({ name }: any) => <span>{name}</span>)
+    <LoadingCard /> 
+    //ratings.map((rating: Rating) => <Card key={rating.id} {...rating}/>)
   );
   return (
     <>
@@ -32,7 +36,7 @@ export default function Home() {
           </PageTitle>
           <HomeFeed>
             <h5>Avaliações mais recentes</h5>
-            {CardsBooks}
+            {CardsRatings}
           </HomeFeed>
         </PageContainer>
         

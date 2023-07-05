@@ -27,6 +27,8 @@ export const globalStyles = globalCss({
 
 export const GlobalContainer = styled('section', {
     display: 'flex',
+    maxHeight: '100vh',
+    overflow: 'hidden'
 })
 
 // All pages styles

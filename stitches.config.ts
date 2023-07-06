@@ -65,6 +65,7 @@ export const { styled, getCssText, globalCss } = createStitches({
             'gradient-vertical': `linear-gradient(180deg, #7FD1CC 0%, #9694F5 100%)`,
             'gradient-horizontal': `linear-gradient(90deg, #7FD1CC 0%, #9694F5 100%)`,
             'gradient': `linear-gradient(180deg, #181C2A 100%, #7FD1CC 100%)`,
+            'gradient-loading': `linear-gradient(-45deg,#0E1116, #181C2A, #0E1116)`,
         },
   
         radii: {

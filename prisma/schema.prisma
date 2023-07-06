@@ -25,7 +25,7 @@ model Book {
   name        String
   author      String
   summary     String
-  cover_url   String
+  cover_url   String 
   total_pages Int
   created_at  DateTime @default(now())
 

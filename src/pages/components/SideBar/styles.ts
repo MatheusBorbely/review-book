@@ -17,6 +17,8 @@ export const SideBarContainer = styled('aside', {
     minWidth: '14.5rem',
     justifyContent: 'space-between',
     marginRight: 0,
+    position: 'sticky',
+    top: 0,
 
     footer:{
         span:{
@@ -80,3 +82,5 @@ export const MenuItem = styled('li', {
     }
     
 })
+
+  

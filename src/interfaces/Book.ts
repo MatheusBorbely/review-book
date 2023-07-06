@@ -3,9 +3,9 @@ export interface Book {
     name: string,
     author: string,
     summary: string,
-    coverUrl: string,
+    cover_url: string,
     totalPages: number,
-    createdAt: Date,
+    created_at: Date,
     categories: string,
     ratings: string,
 }

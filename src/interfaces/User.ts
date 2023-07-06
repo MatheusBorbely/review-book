@@ -1,7 +1,7 @@
 export interface User {
     id: string,
     name: string,
-    avatarUrl: string,
-    createdAt: Date,
+    avatar_url: string,
+    created_at: Date,
     ratings: string,
 }

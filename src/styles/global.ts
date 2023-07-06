@@ -39,7 +39,15 @@ export const PageContainer = styled('main', {
     gap: '$10',
     padding: '0 6rem',
     paddingTop: '4.5rem',
-    margin: '0 auto'
+    margin: '0 auto',
+    
+    overflow: 'scroll',
+    scrollbarWidth: 'none',
+    '-ms-overflow-style': 'none',
+
+    '&::-webkit-scrollbar':{
+        display: 'none',
+    },
 
 })
 export const PageTitle = styled('section', {

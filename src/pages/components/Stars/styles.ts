@@ -5,6 +5,6 @@ export const StarsContainer = styled('section', {
     gap: '$1',
 
     svg:{
-        color: '$purple200'
+        color: '$purple100'
     }
 })

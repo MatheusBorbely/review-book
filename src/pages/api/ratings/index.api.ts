@@ -1,10 +1,9 @@
-import { prisma } from "@/lib/prisma";
 import { NextApiRequest, NextApiResponse } from "next";
-import { z } from "zod";
-import getBooks from "./getBooks";
+import getAllRating from "./getAllRatings";
 
 export default async function handler( req: NextApiRequest, res: NextApiResponse){
-    getBooks(req,res)
-   
 
+    if(req.method === 'GET') return getAllRating(req, res);
+
+    return res.status(405).end();
 }

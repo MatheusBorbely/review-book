@@ -9,18 +9,35 @@ import { Card } from './components/Card'
 import { LoadingCard } from './components/LoadingCard'
 import Link from 'next/link'
 import { RatingHomeFeed } from '@/interfaces/Rating/RatingHomeFeed'
+import { Book } from '@/interfaces/Book/Book'
+import { z } from 'zod'
+import CardRecommendation from './components/CardRecommendation'
 
 
 export default function Home() {
-  const {data: ratings, isLoading} = useQuery(['ratings'],async () => {
+  const {data: ratings, isLoading: isLoadingRatings} = useQuery(['ratings'],async () => {
     const response = await api.get('/ratings');
     return response.data;
   })
 
-  const CardsRatings = isLoading ? (
+  const {data: recommedations, isLoading: isLoadingRecommedations} = useQuery(['recommedations'],async () => {
+    const response = await api.get('/books',{
+      params:{
+        order: 'DESC'
+      }
+    });
+    return response.data;
+  })
+
+  const CardsRatings = isLoadingRatings ? (
     <LoadingCard />
   ) : (
-    ratings.map((rating: RatingHomeFeed) => <Card key={rating.id} {...rating}/>)
+    ratings.map((rating: RatingHomeFeed) => <Card key={rating.id} {...rating} />)
+  );
+  const CardsRecommedantions = isLoadingRecommedations ? (
+    <LoadingCard />
+  ) : (
+    recommedations.map((recommedation: Book) => <CardRecommendation key={recommedation.id} {...recommedation}/>)
   );
   return (
     <>
@@ -52,6 +69,9 @@ export default function Home() {
                 <CaretRight size={16}/>
               </Link> 
             </header>
+            <section>
+              {CardsRecommedantions}
+            </section>
           </HomeRecommendation>
         </HomeContainer>
       </PageContainer>     
